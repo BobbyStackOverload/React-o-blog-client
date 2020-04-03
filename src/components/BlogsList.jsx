@@ -29,11 +29,13 @@ class BlogsList extends Component {
       };
 
     render() {
+        console.log(this.state.data)
         if (this.state.data !== 0) {
         const blogsData = this.state.data;
 
         return (
             <div>
+                <h1>Blogs</h1>
                 <ul>
                     {blogsData.map(element => (
                         <div key={element.id}>{element.title} <br></br>

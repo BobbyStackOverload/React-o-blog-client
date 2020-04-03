@@ -27,12 +27,13 @@ class BlogsList extends Component {
       };
 
     render() {
-        if (this.state.data !== 0) {
-            const prop = this.props.match.params.user_post;
+        if (this.state.data != 0) {
+        const prop = this.props.match.params.user_post;
         const blogsData = this.state.data;
-        console.log("On the route blog data", blogsData)
+        console.log("On the route blog data", prop)
         return (
             <div className="blogPost">
+                {console.log(blogsData[prop].title)}
                 <h1>{blogsData[`${prop}`].title}</h1><br></br> <hr />
                 <div className="textWrapper">
                     <h5 className="blogText">{blogsData[`${prop}`].blog_posts}</h5>                     
